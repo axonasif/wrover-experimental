@@ -8,8 +8,10 @@ tasks:
       mkdir /home/gitpod/.cargo
       ln -s /home/esp/.cargo/bin /home/gitpod/.cargo/bin
       ln -s /home/esp/.cargo/env /home/gitpod/.cargo/env
+      ln -s /home/esp/.espressif /home/gitpod/.espressif
+      ln -s /home/esp/esp-idf /home/gitpod/esp-idf
       source /home/gitpod/.cargo/env
-      gp env IDF_PATH=/home/esp/esp-idf
+      gp env IDF_PATH=/home/gitpod/esp-idf
       eval $(gp env -e)
 vscode:
   extensions:
@@ -18,5 +20,6 @@ vscode:
     - vadimcn.vscode-lldb
     - anwar.resourcemonitor
     - yzhang.markdown-all-in-one
+    - serayuzgur.crates
 ports:
   - port: 9012
