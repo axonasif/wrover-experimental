@@ -11,6 +11,7 @@ tasks:
       ln -s /home/esp/.espressif /home/gitpod/.espressif
       ln -s /home/esp/esp-idf /home/gitpod/esp-idf
       source /home/gitpod/.cargo/env
+      source /home/gitpod/esp-idf/export.sh
       gp env IDF_PATH=/home/gitpod/esp-idf
       eval $(gp env -e)
 vscode:
