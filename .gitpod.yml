@@ -4,7 +4,7 @@ image: sergiogasquez/esp-rs-env:esp32
 tasks:
   - name: Rename
     before: |
-      usermod -l gitpod esp
+      usermod -m -d /newhome username
 #   - name: Adopt environment in the container image to gitpod user
 #     command: |
 #       ln -s /home/esp/.rustup /home/gitpod/.rustup
