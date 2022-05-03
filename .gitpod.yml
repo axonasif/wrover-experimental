@@ -8,12 +8,11 @@ tasks:
       mkdir /home/gitpod/.cargo
       ln -s /home/esp/.cargo/bin /home/gitpod/.cargo/bin
       ln -s /home/esp/.cargo/env /home/gitpod/.cargo/env
-      ln -s /home/esp/.espressif /home/gitpod/.espressif
-      ln -s /home/esp/esp-idf /home/gitpod/esp-idf
       source /home/gitpod/.cargo/env
-      source /home/gitpod/esp-idf/export.sh
-      gp env IDF_PATH=/home/gitpod/esp-idf
-      eval $(gp env -e)
+      source /home/esp/export-rust.sh
+      alias wokwi='bash /workspace/wrover-experimental/wokwi/run.sh'
+      gp env CURRENT_PROJECT=/workspace/wrover-experimental/
+      gp env ESP_BOARD=esp32
 vscode:
   extensions:
     - matklad.rust-analyzer
@@ -24,3 +23,4 @@ vscode:
     - serayuzgur.crates
 ports:
   - port: 9012
+    visibility: public
