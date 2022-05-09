@@ -1,7 +1,7 @@
 # Select the proper tag: refer to https://github.com/SergioGasquez/esp-rs-container
 # for more information about tags
 image:
-  - file: .gitpod.Dockerfile
+  file: .gitpod.Dockerfile
 tasks:
   - name: Adopt environment in the container image to gitpod user
     command: |
